@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Museum Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏛️ Virtual Museum Explorer</h1>
+        <p>Discover history, culture, science and art.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Welcome to Our Museum</h2>
+            <p>
+                Explore our exhibition rooms and discover fascinating
+                stories from different fields. Use the navigation buttons
+                to retrace your steps.
+            </p>
+        </section>
+
+        <section class="navigation">
+            <button id="backButton" disabled>⬅ Back</button>
+            <button id="homeButton">🏠 Main Hall</button>
+            <button id="forwardButton" disabled>Forward ➡</button>
+        </section>
+
+        <section class="current-exhibit">
+            <h2 id="exhibitTitle">Main Hall</h2>
+
+            <div id="exhibitIcon" class="exhibit-icon">🏛️</div>
+
+            <p id="exhibitDescription">
+                Welcome! Select an exhibition below to begin exploring.
+            </p>
+
+            <p id="exhibitCounter">Exhibits visited: 0</p>
+        </section>
+
+        <section class="exhibitions">
+            <h2>Explore Our Exhibitions</h2>
+
+            <div class="exhibit-grid">
+
+                <article class="exhibit-card">
+                    <div class="card-icon">🏺</div>
+                    <h3>Ancient Artifacts</h3>
+                    <p>Discover objects and treasures from ancient civilizations.</p>
+                    <button onclick="visitExhibit('ancient')">
+                        Explore Exhibit
+                    </button>
+                </article>
+
+                <article class="exhibit-card">
+                    <div class="card-icon">🌍</div>
+                    <h3>African Heritage</h3>
+                    <p>Explore African traditions, symbols, clothing and culture.</p>
+                    <button onclick="visitExhibit('african')">
+                        Explore Exhibit
+                    </button>
+                </article>
+
+                <article class="exhibit-card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Science and Technology</h3>
+                    <p>Discover scientific inventions and technological progress.</p>
+                    <button onclick="visitExhibit('science')">
+                        Explore Exhibit
+                    </button>
+                </article>
+
+                <article class="exhibit-card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Modern Art</h3>
+                    <p>Experience creativity through modern paintings and design.</p>
+                    <button onclick="visitExhibit('modern')">
+                        Explore Exhibit
+                    </button>
+                </article>
+
+                <article class="exhibit-card">
+                    <div class="card-icon">🦴</div>
+                    <h3>Natural History</h3>
+                    <p>Learn about fossils, animals and the natural world.</p>
+                    <button onclick="visitExhibit('nature')">
+                        Explore Exhibit
+                    </button>
+                </article>
+
+                <article class="exhibit-card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Space Exploration</h3>
+                    <p>Discover planets, spacecraft and humanity's journey into space.</p>
+                    <button onclick="visitExhibit('space')">
+                        Explore Exhibit
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="history-section">
+
+            <div class="history-heading">
+                <h2>📜 Exploration History</h2>
+                <button id="resetButton">Reset Exploration</button>
+            </div>
+
+            <p id="historyMessage">You have not explored any exhibits yet.</p>
+
+            <ol id="historyList"></ol>
+
+        </section>
+
+        <footer>
+            <p>Virtual Museum Explorer | Data Structures Project</p>
+            <p>Powered by the Stack Data Structure</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
